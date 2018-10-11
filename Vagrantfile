@@ -6,7 +6,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.box = "danielec/stretch64"
   config.vm.provision "shell", path: "scripts/consul.sh", run: "always"
   config.vm.synced_folder ".", "/vagrant"
-  config.vm.synced_folder "/home/daniele/Software/Scripts/Packages", "/vagrant/pkg"
   
   config.vm.provider "virtualbox" do |v|
     v.memory = 1024
